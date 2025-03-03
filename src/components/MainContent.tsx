@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
-import { useFilter } from './FilterContext'
+
 import { LuTally3 } from 'react-icons/lu'
 import axios from 'axios'
 import BookCard from './BookCard'
+import useFilter from './UseFilter'
 
 const MainContent = () => {
 	const { searchQuerry, selectedCategory, minPrice, maxPrice, keyword } = useFilter()

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { useFilter } from './FilterContext'
+import useFilter from './UseFilter'
+
 
 interface ProductProps {
 	category: string

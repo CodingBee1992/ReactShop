@@ -34,7 +34,7 @@ const TopSellers = () => {
 
 
   const handleFollowClick =(index:number)=>{
-    setAuthors(prevAuthor => prevAuthor.map((author,i)=> i ===index ? {...author, isFollowing: !author.isFollowing} : author))
+    setAuthors(prevAuthor => prevAuthor.map((author,i)=> i === index ? {...author, isFollowing: !author.isFollowing} : author))
   }
 
   return (

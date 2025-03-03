@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext, useState } from 'react'
+import { createContext, ReactNode, useState } from 'react'
 
 interface FilterContextProps {
 	searchQuerry: string
@@ -12,11 +12,13 @@ interface FilterContextProps {
 	keyword: string
 	setKeyword: (keyword: string) => void
 }
-
+// interface ProviderProps{
+// 	children: ReactNode
+// }
 
 const FilterContext = createContext<FilterContextProps | undefined>(undefined)
 
-export const FilterProvider: React.FC<{children:ReactNode}> = ({ children }) => {
+export const FilterProvider: React.FC<{children: ReactNode}> = ({ children, }) => {
 	const [searchQuerry, setSearchQuerry] = useState<string>('')
 	const [selectedCategory, setSelectedCategory] = useState<string>('')
 	const [minPrice, setMinPrice] = useState<number | undefined>(undefined)
@@ -42,12 +44,9 @@ export const FilterProvider: React.FC<{children:ReactNode}> = ({ children }) => 
 	)
 }
 
-export const useFilter = ()=>{
-    const context = useContext(FilterContext)
 
-    if(context === undefined){
-        throw new Error('useFilter must be used within a FilterProvider ')
-    }
 
-    return context
+export {
+	// FilterProvider,
+	FilterContext,
 }
