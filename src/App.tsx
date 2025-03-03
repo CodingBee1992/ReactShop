@@ -14,7 +14,7 @@ const App = () => {
 				<div className="rounded w-full flex justify-center flex-wrap">
 					<Routes>
 						<Route path="/ReactShop/" element={<MainContent/>} />
-						<Route path="/product/:id" element={<ProductPage/>} />
+						<Route path="/ReactShop/product/:id" element={<ProductPage/>} />
 					</Routes>
 
 					{/* <MainContent />

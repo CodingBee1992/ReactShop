@@ -5,9 +5,10 @@ import axios from 'axios'
 import BookCard from './BookCard'
 import useFilter from './UseFilter'
 
+
 const MainContent = () => {
 	const { searchQuerry, selectedCategory, minPrice, maxPrice, keyword } = useFilter()
-
+	
 	const [products, setProducts] = useState<any[]>([])
 	const [filter, setFilter] = useState<string>('all')
 	const [currentPage, setCurrentPage] = useState(1)
@@ -134,7 +135,7 @@ const MainContent = () => {
 					{/* BookCard */}
 
 					{filteredProducts.map(product => (
-						<BookCard
+						<BookCard 
 							key={product.id}
 							id={product.id}
 							title={product.title}
